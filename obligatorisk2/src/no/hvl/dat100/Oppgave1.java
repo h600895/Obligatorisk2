@@ -20,7 +20,6 @@ public class Oppgave1 {
 		//G
 		System.out.println(erSortert(list));
 		//H
-		//System.out.println(settSammen(list, list1));
 		skrivUt(settSammen(list, list1));
 	}
 	//A
@@ -35,14 +34,12 @@ public class Oppgave1 {
 	//B
 	public static String tilStreng(int[] tabell) {
 		String string = "";
-		
 		for (int i:tabell) {
 			string += "," + i;
 		}
 		String stringCut = string.substring(1,string.length());
 		return "[" + stringCut + "]";
 	}
-	
 	//C
 	public static int summer(int[] tabell) {
 		int sumFor = 0;
@@ -59,12 +56,11 @@ public class Oppgave1 {
 		for (int i:tabell) {
 			sumUtvidedFor += i;
 		}
-		System.out.println(sumFor + ", " + sumWhile + ", " + sumUtvidedFor);
+		System.out.println(sumFor + ", " + sumWhile + ", " + sumUtvidedFor); //Viser at alle løkkene fungerer
 		return sumFor;
 	}
 	//D
 	public static boolean finnesTall (int[] tabell, int tall) {
-		
 		for (int i:tabell) {
 			if (i == tall) {
 				return true;
@@ -89,6 +85,7 @@ public class Oppgave1 {
 		}
 		return revTabell;
 	}
+	//G
 	public static boolean erSortert (int[] tabell) {
 		for (int i = 1; i<tabell.length; i++) {
 			if (tabell[i]<tabell[i-1]) {
@@ -97,6 +94,7 @@ public class Oppgave1 {
 		}
 		return true;
 	}
+	//H
 	public static int[] settSammen(int[] tabell, int[] tabell1) {
 		int[] nyTabell = new int[tabell.length + tabell1.length];
 		for (int i = 0; i<tabell.length;i++) {
@@ -107,5 +105,4 @@ public class Oppgave1 {
 		}
 		return nyTabell;
 	}
-
 }
